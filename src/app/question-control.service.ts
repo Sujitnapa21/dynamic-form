@@ -42,63 +42,66 @@ export class QuestionControlService {
 
       new QuestionBase<string>({
         controlType: "textbox",
+        key: 'age',
+        label: 'Age',
+        required: true,
+        order: 2
+      }),
+
+      new QuestionBase<string>({
+        controlType: "textbox",
         key: 'email',
         label: 'Email',
         type: 'email',
         required: true,
         validator: "email",
-        order: 2
-      }),
-
-      new QuestionBase<string>({
-        controlType: "dropdown",
-        key: 'country',
-        label: 'Country',
-        options: [
-          {key: 'usa',  value: 'United States of America'},
-          {key: 'br',  value: 'Brazil'},
-          {key: 'other',   value: 'Other'}
-        ],
         order: 3
       }),
 
       new QuestionBase<string>({
-        controlType: "checkbox",
-        key: 'agree',
-        label: 'I accept terms and services',
-        type: 'checkbox',
-        required: true,
+        controlType: "dropdown",
+        key: 'vote',
+        label: 'Vote',
+        options: [
+          {key: 'exo',  value: 'EXO'},
+          {key: 'rvv',  value: 'Red Velvet'},
+          {key: 'other',   value: 'Other'}
+        ],
         order: 4
       }),
 
-      new QuestionBase<string>({
-        controlType: "radio",
-        key: 'sex',
-        label: 'Sex',
-        type: 'radio',
-        options: [
-          {key: 'male',  value: 'Male'},
-          {key: 'female',  value: 'Female'}
-        ],
-        order: 5
-      }),
 
       new QuestionBase<string>({
         controlType: "textarea",
         key: 'message',
-        label: 'Mesage',
+        label: 'Message',
         type: 'textarea',
-        order: 6
+        order: 5
       }),
 
-      new QuestionBase<string>({
-        controlType: "textbox",
-        key: 'age',
-        label: 'age',
-        required: true,
-        order: 7
-      })
+      // new QuestionBase<string>({
+      //   controlType: "checkbox",
+      //   key: 'agree',
+      //   label: 'I accept terms and services',
+      //   type: 'checkbox',
+      //   required: true,
+      //   order: 6
+      // }),
+
+      // new QuestionBase<string>({
+      //   controlType: "radio",
+      //   key: 'sex',
+      //   label: 'Sex',
+      //   type: 'radio',
+      //   options: [
+      //     {key: 'male',  value: 'Male'},
+      //     {key: 'female',  value: 'Female'}
+      //   ],
+      //   order: 7
+      // }),
     ];
+
+    
 
 
 
